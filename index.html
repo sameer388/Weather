@@ -4,15 +4,21 @@
         <meta charset="utf-8">
         <title>My Weather</title>
         <style>
-            body{
-              background-color: #51d5e3;
-            }
+            html {
+                background-color: #E4E9FD;
+                min-height: 1000px;
+                font-family: 'helvetica neue';
+              }
+             form{
+                text-align: center;
+                padding-top : 250px;
+             }       
         </style>
     </head>
     <body>
-        <form action="/" method="post">
-        <label for="cityInput">City Name: </label>
-        <input id="cityInput" type="text" name="cityName">
+        <form  action="/" method="post">
+        <label for="cityInput"><h3>Enter the City Name: </h3></label>
+        <input id="cityInput" type="text" name="cityName" autocomplete="off">
         <button type="submit">Go</button>
         </form>
     </body>
