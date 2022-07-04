@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="images/icon.png">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ae8ed9530d.js" crossorigin="anonymous"></script>
+
+    <!--style.css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <div class="card">
+        <div class="search">
+            <form action="/" method="post">
+                <input class="search-bar" type="text" name="cityName" autocomplete="off" placeholder="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="weather">
+            <h4 class = "city">Weather in <%= weatherData.name %></h4>
+            <h1 class="temp"><%= weatherData.main.temp %>°C</h1>
+            <div class="feels-like">Feels like <%= weatherData.main.feels_like %></div>
+            <div class="flex">
+            <img src="http://openweathermap.org/img/wn/<%= weatherData.weather[0].icon %>.png"   alt="weather-icon" class="icon">
+            <div class="description"><%= weatherData.weather[0].description %></div>
+            </div>
+            <div class="humidity">Humidity : <%= weatherData.main.humidity %>%</div>
+            <div class="wind">Wind Speed : <%= weatherData.wind.speed %>km/h</div>
+        </div>
+       
+    </div>
+</body>
+
+</html>

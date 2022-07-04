@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>My Weather</title>
-        <style>
-            html {
-                background-color: #E4E9FD;
-                min-height: 1000px;
-                font-family: 'helvetica neue';
-              }
-             form{
-                text-align: center;
-                padding-top : 250px;
-             }       
-        </style>
-    </head>
-    <body>
-        <form  action="/" method="post">
-        <label for="cityInput"><h3>Enter the City Name: </h3></label>
-        <input id="cityInput" type="text" name="cityName" autocomplete="off">
-        <button type="submit">Go</button>
-        </form>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ae8ed9530d.js" crossorigin="anonymous"></script>
+
+    <!--style.css -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <div class="card">
+        <div class="search">
+            <form action="/" method="post">
+                <input class="search-bar" type="text" name="cityName" autocomplete="off" placeholder="Search">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="weather">
+            <h2 class = "city">Weather in Denver</h2>
+            <h1 class="temp">51°C</h1>
+            <img src="" alt="" class="icon">
+            <div class="description">Cloudy</div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Wind Speed: 6.2km/h</div>
+        </div>
+    </div>
+</body>
+
 </html>
